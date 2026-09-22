@@ -25,7 +25,8 @@ var DEPARTMENTS = [
   'Customer Service',
   'Logistic',
   'Front desk',
-  'Billing Team'
+  'Billing Team',
+  'Social Media & Marketing'
 ];
 
 var HEADERS = [

@@ -80,6 +80,14 @@ document.addEventListener('DOMContentLoaded', () => {
             'Price Mismatch',
             'Process',
             'Other'
+        ],
+        'Social Media & Marketing': [
+            'Campaign / Promotion Request',
+            'Creative / Banner Design',
+            'Influencer / Collaboration',
+            'Social Media Query / Escalation',
+            'Ad Budget / Boost Request',
+            'Other'
         ]
     };
 
