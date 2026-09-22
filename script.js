@@ -14,40 +14,43 @@ document.addEventListener('DOMContentLoaded', () => {
     // =============================================
     const CATEGORY_MAP = {
         'Sales & Floor Incharge': [
-            'Supply',
-            'Negotiation',
-            'Discount / Offer Issue',
-            'Display',
-            'Price Issue',
-            'Staff Shortage on Floor',
-            'Customer Complaint on Floor',
-            'Training',
+            'Customer & Order Issues',
+            'Pricing, Discounts & Approvals',
+            'Floor Stock & Replenishment',
+            'Display & Floor Maintenance',
+            'Staff & Sales Performance',
             'Other'
         ],
         'Purchase & Accounts': [
-            'Invoice / Bill Mismatch',
-            'Payment Pending',
-            'Purchase Order Issue',
-            'GST / Tax Related',
+            'PO & Vendor Procurement',
+            'Invoicing & Bills Entry',
+            'Vendor Payments & Reconciliation',
+            'GST, TDS & Tax Compliance',
+            'Expenses & Banking',
             'Other'
         ],
         'Research and Development': [
-            'Market Research Request',
-            'Tech Related Issue',
+            'New Product & Brand Research',
+            'Sample Evaluation & Testing',
+            'Product Quality & Packaging Issues',
+            'Costing, Specs & Usage Guidelines',
+            'Store & Process Innovation',
             'Other'
         ],
         'HR': [
-            'Attendance / Leave Issue',
-            'Salary / Payroll Query',
-            'Staff Misconduct / Complaint',
-            'Training / Onboarding Request',
+            'Attendance, Biometric & Shifts',
+            'Leave & Permissions',
+            'Payroll, Advance & Incentives',
+            'Hiring, Uniform & Onboarding',
+            'Employee Relations, Discipline & Training',
             'Other'
         ],
         'Operations & Inventory': [
-            'Stock Mismatch',
-            'Gofrugal Software Issue',
-            'Barcode / Label Problem',
-            'Warehouse / Storage Issue',
+            'Stock Discrepancy & Audits',
+            'Stock Transfers & Indents',
+            'Damaged Goods, Scrap & Repairs',
+            'Barcode & Master Data Errors',
+            'Storage Space & Aging Inventory',
             'Other'
         ],
         'Customer Service': [
@@ -58,38 +61,46 @@ document.addEventListener('DOMContentLoaded', () => {
             'Other'
         ],
         'Logistic': [
-            'Delivery Delay',
-            'Damaged in Transit',
-            'Vehicle / Transport Issue',
-            'Inter-store Transfer Problem',
+            'Delivery Scheduling & Delays',
+            'Address & Customer Contact Issues',
+            'Transit Damage & Quantity Discrepancy',
+            'Vehicle, Driver & Loading Operations',
+            'E-Way Bills, Challans & Freight Approvals',
             'Other'
         ],
         'Front desk': [
-            'Visitor / Vendor Entry Issue',
-            'Phone / Communication Problem',
-            'Courier / Parcel Issue',
-            'Facility Complaint',
-            'Process',
+            'Customer Inquiries & Product Availability',
+            'Order Tracking & Delivery Status',
+            'Complaints, Returns & Service Requests',
+            'Visitor & Vendor Management',
+            'Customer Data & Records',
             'Other'
         ],
         'Billing Team': [
-            'System',
-            'Billing Error',
-            'Tender Issue',
-            'Bill Reprint / Cancellation',
-            'Price Mismatch',
-            'Process',
+            'Billing Software & Hardware Issues',
+            'Price, Barcode & Item Master Errors',
+            'Bill Corrections, Cancellations & Credit Notes',
+            'Payment & Cash Drawer Issues',
+            'Customer GST & Tax Details',
             'Other'
         ],
         'Social Media & Marketing': [
-            'Campaign / Promotion Request',
-            'Creative / Banner Design',
-            'Influencer / Collaboration',
-            'Social Media Query / Escalation',
-            'Ad Budget / Boost Request',
+            'Creatives & Content Production',
+            'Campaigns, Ads & Promotions',
+            'Social Media & Online Inquiries',
+            'Lead Generation & WhatsApp Marketing',
+            'Catalogue & Product Info Updates',
             'Other'
         ]
     };
+
+    // Department name aliases for seamless compatibility
+    CATEGORY_MAP['Marketing & Social Media'] = CATEGORY_MAP['Social Media & Marketing'];
+    CATEGORY_MAP['Accounts & Purchase'] = CATEGORY_MAP['Purchase & Accounts'];
+    CATEGORY_MAP['R&D'] = CATEGORY_MAP['Research and Development'];
+    CATEGORY_MAP['Billing'] = CATEGORY_MAP['Billing Team'];
+    CATEGORY_MAP['Front Desk'] = CATEGORY_MAP['Front desk'];
+    CATEGORY_MAP['Logistics'] = CATEGORY_MAP['Logistic'];
 
     // =============================================
     // DROPDOWN HELPER — handles open/close/select
