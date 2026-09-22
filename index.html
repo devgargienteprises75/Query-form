@@ -47,29 +47,23 @@
                         </div>
                         <ul class="select-options">
                             <li data-value="">Choose</li>
-                            <li data-value="Sales">Sales</li>
-                            <li data-value="Purchase">Purchase</li>
-                            <li data-value="Accounts">Accounts</li>
+                            <li data-value="Sales & Floor Incharge">Sales &amp; Floor Incharge</li>
+                            <li data-value="Purchase & Accounts">Purchase &amp; Accounts</li>
                             <li data-value="Research and Development">Research and Development</li>
-                            <li data-value="Marketing">Marketing</li>
                             <li data-value="HR">HR</li>
-                            <li data-value="Operation">Operation</li>
-                            <li data-value="Inventory & Reports">Inventory &amp; Reports</li>
-                            <li data-value="Market Place">Market Place</li>
+                            <li data-value="Operations & Inventory">Operations &amp; Inventory</li>
                             <li data-value="Customer Service">Customer Service</li>
                             <li data-value="Logistic">Logistic</li>
                             <li data-value="Front desk">Front desk</li>
                             <li data-value="Billing Team">Billing Team</li>
-                            <li data-value="Floor Incharge">Floor Incharge</li>
-                            <li data-value="Social Media">Social Media</li>
                         </ul>
                         <input type="hidden" name="department" id="department" required>
                     </div>
                 </div>
             </div>
 
-            <!-- Query Category -->
-            <div class="form-card">
+            <!-- Query Category (populated dynamically based on department) -->
+            <div class="form-card" id="queryCategoryCard" style="display: none;">
                 <div class="form-group">
                     <label for="queryCategory">Query Category <span class="required-star">*</span></label>
                     <div class="custom-select" id="queryCategorySelect">
@@ -81,17 +75,6 @@
                         </div>
                         <ul class="select-options">
                             <li data-value="">Choose</li>
-                            <li data-value="Barcode / Product Code">Barcode / Product Code</li>
-                            <li data-value="SP/MRP">SP/MRP</li>
-                            <li data-value="Gofrugal Software">Gofrugal Software</li>
-                            <li data-value="Staff Related">Staff Related</li>
-                            <li data-value="IN/OUT">IN/OUT</li>
-                            <li data-value="Scrap">Scrap</li>
-                            <li data-value="Service">Service</li>
-                            <li data-value="Space related">Space related</li>
-                            <li data-value="Cleaning related">Cleaning related</li>
-                            <li data-value="Process Unfollow">Process Unfollow</li>
-                            <li data-value="Other">Other</li>
                         </ul>
                         <input type="hidden" name="queryCategory" id="queryCategory" required>
                     </div>
@@ -112,19 +95,14 @@
                     <label>Query Related To Department</label>
                     <div class="checkbox-group" id="queryRelatedDept">
                         <label class="checkbox-option">
-                            <input type="checkbox" name="queryRelatedDept" value="Sales">
+                            <input type="checkbox" name="queryRelatedDept" value="Sales & Floor Incharge">
                             <span class="checkbox-box"></span>
-                            <span class="checkbox-text">Sales</span>
+                            <span class="checkbox-text">Sales &amp; Floor Incharge</span>
                         </label>
                         <label class="checkbox-option">
-                            <input type="checkbox" name="queryRelatedDept" value="Purchase">
+                            <input type="checkbox" name="queryRelatedDept" value="Purchase & Accounts">
                             <span class="checkbox-box"></span>
-                            <span class="checkbox-text">Purchase</span>
-                        </label>
-                        <label class="checkbox-option">
-                            <input type="checkbox" name="queryRelatedDept" value="Accounts">
-                            <span class="checkbox-box"></span>
-                            <span class="checkbox-text">Accounts</span>
+                            <span class="checkbox-text">Purchase &amp; Accounts</span>
                         </label>
                         <label class="checkbox-option">
                             <input type="checkbox" name="queryRelatedDept" value="Research and Development">
@@ -132,29 +110,14 @@
                             <span class="checkbox-text">Research and Development</span>
                         </label>
                         <label class="checkbox-option">
-                            <input type="checkbox" name="queryRelatedDept" value="Marketing">
-                            <span class="checkbox-box"></span>
-                            <span class="checkbox-text">Marketing</span>
-                        </label>
-                        <label class="checkbox-option">
                             <input type="checkbox" name="queryRelatedDept" value="HR">
                             <span class="checkbox-box"></span>
                             <span class="checkbox-text">HR</span>
                         </label>
                         <label class="checkbox-option">
-                            <input type="checkbox" name="queryRelatedDept" value="Operation">
+                            <input type="checkbox" name="queryRelatedDept" value="Operations & Inventory">
                             <span class="checkbox-box"></span>
-                            <span class="checkbox-text">Operation</span>
-                        </label>
-                        <label class="checkbox-option">
-                            <input type="checkbox" name="queryRelatedDept" value="Inventory & Reports">
-                            <span class="checkbox-box"></span>
-                            <span class="checkbox-text">Inventory &amp; Reports</span>
-                        </label>
-                        <label class="checkbox-option">
-                            <input type="checkbox" name="queryRelatedDept" value="Market Place">
-                            <span class="checkbox-box"></span>
-                            <span class="checkbox-text">Market Place</span>
+                            <span class="checkbox-text">Operations &amp; Inventory</span>
                         </label>
                         <label class="checkbox-option">
                             <input type="checkbox" name="queryRelatedDept" value="Customer Service">
@@ -175,11 +138,6 @@
                             <input type="checkbox" name="queryRelatedDept" value="Billing Team">
                             <span class="checkbox-box"></span>
                             <span class="checkbox-text">Billing Team</span>
-                        </label>
-                        <label class="checkbox-option">
-                            <input type="checkbox" name="queryRelatedDept" value="Floor Incharge">
-                            <span class="checkbox-box"></span>
-                            <span class="checkbox-text">Floor Incharge</span>
                         </label>
                         <label class="checkbox-option">
                             <input type="checkbox" name="queryRelatedDept" value="Floor Staff">

@@ -1,9 +1,14 @@
 // ============================================
 // Google Apps Script — Employee Query Form
 //
+// DEPARTMENTS (merged):
+// - Sales & Marketing (was: Sales, Marketing, Social Media, Market Place)
+// - Purchase & Accounts (was: Purchase, Accounts)
+// - Operations & Inventory (was: Operation, Inventory & Reports)
+//
 // SETUP:
 // 1. Paste this code in Extensions → Apps Script
-// 2. Select "setupAllSheets" → Click Run
+// 2. Select "setupAllSheets" → Click ▶ Run
 //    (Grant permissions when prompted)
 // 3. Deploy → New deployment → Web app
 //    - Execute as: Me
@@ -12,11 +17,15 @@
 // ============================================
 
 var DEPARTMENTS = [
-  'Sales', 'Purchase', 'Accounts',
-  'Research and Development', 'Marketing', 'HR',
-  'Operation', 'Inventory & Reports', 'Market Place',
-  'Customer Service', 'Logistic', 'Front desk',
-  'Billing Team', 'Floor Incharge', 'Social Media'
+  'Sales & Floor Incharge',
+  'Purchase & Accounts',
+  'Research and Development',
+  'HR',
+  'Operations & Inventory',
+  'Customer Service',
+  'Logistic',
+  'Front desk',
+  'Billing Team'
 ];
 
 var HEADERS = [
@@ -68,7 +77,7 @@ function createSheet(spreadsheet, sheetName) {
   // Set column widths
   sheet.setColumnWidth(1, 180);  // Timestamp
   sheet.setColumnWidth(2, 160);  // Name
-  sheet.setColumnWidth(3, 160);  // Department
+  sheet.setColumnWidth(3, 180);  // Department
   sheet.setColumnWidth(4, 180);  // Category
   sheet.setColumnWidth(5, 300);  // Description
   sheet.setColumnWidth(6, 200);  // Related Depts
